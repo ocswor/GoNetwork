@@ -23,6 +23,11 @@ type Mutex struct {
 	sync.Mutex
 }
 
+type RwMutex struct {
+	Mutex
+}
+
+
 func (m *Mutex) TryLock() bool {
 	// 如果能成功抢到锁
 	println(&m.Mutex)
