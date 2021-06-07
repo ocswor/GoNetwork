@@ -1,15 +1,21 @@
 package main
 
 import (
-	"net/http"
 	"github.com/gin-gonic/gin"
+	"net/http"
+	"time"
 )
 
 func main() {
-	gin.SetMode(gin.ReleaseMode)
+	//gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Welcome Gin Server")
+		cCp := c.Copy()
+		go func() {
+			time.Sleep(5 * time.Second)
+			cCp .String(http.StatusOK, "Welcome Gin Server")
+		}()
+
 	})
 
 	router.Run()

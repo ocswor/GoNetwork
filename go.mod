@@ -4,6 +4,9 @@ go 1.15
 
 require (
 	github.com/gin-gonic/gin v1.7.1
-	github.com/orcaman/concurrent-map v0.0.0-20210501183033-44dafcb38ecc // indirect
+	github.com/go-redis/redis v6.15.9+incompatible
+	github.com/onsi/ginkgo v1.16.4 // indirect
+	github.com/onsi/gomega v1.13.0 // indirect
+	github.com/stretchr/testify v1.5.1
 	gopkg.in/macaron.v1 v1.4.0
 )
